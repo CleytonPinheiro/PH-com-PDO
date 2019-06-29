@@ -4,14 +4,7 @@
         $categoria = new Categoria();
         $lista = $categoria->listar();
     } catch (Exception $e){
-        if (DEBUG){
-            echo '<pre>';
-            print_r($e);
-            echo '</pre>';
-        } else{
-            echo $e->getMessage();
-        }
-        exit;
+        Erro::trataErro($e);
 
     }
 ?>
